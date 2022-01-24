@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Date Night{% endblock %}
+
+{% block body %}
+<div id="background">
+    <h1>Date Night!</h1>
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <div>
+            <input type="user-email" name="email" placeholder="email">
+            <input type="user-pass" name="password" placeholder="password">
+            <input type="submit" class="submit">
+        </div>
+    </form>
+
+    <form action="/register-page">
+    <h2>Or Register</h2>
+        <button id="register">Register Now</button>
+    </form>
+</div>
+
+{% endblock %}

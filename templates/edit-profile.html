@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Date Night{% endblock %}
+
+{% block body %}
+<h1>Welcome {{ user.email }}</h1>
+
+<h2>Fill out the blanks to create a more dynamic profile</h2>
+
+<form action="/profile">
+    <div>
+        <label>Edit your names?</label>
+        <input type='text' name='name1' placeholder="name one">
+        <input type='text' name='name2' placeholder="name two">
+    </div>
+    <div>
+        <label>Tell us briefly about you guys!</label>
+        <input type='textarea' id='bio'>
+    </div>
+    <div>
+        <label>What are a few of your shared interests?</label>
+        <input type='textarea' id='interests'>
+    </div>
+    <div>
+        <label>What are some of your shared dislikes/pet peeves?</label>
+        <input type='textarea' id='dislikes'>
+    </div>
+    <input type="submit" class="submit">
+
+</form>
+{% endblock %}

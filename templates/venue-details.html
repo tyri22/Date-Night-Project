@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Venue Details: {{ venue['name'] }}{% endblock %}
+
+{% block body %}
+
+<h1>{{ venue['name'] }}</h1>
+
+<img id="ven-img" src="{{ venue['image_url'] }}"/>
+
+<p>Location: {{ venue['location']['address1'] }}</p>
+<p>Price Level: {{ venue['price'] }}</p>
+
+<p>
+    <a href="{{ venue['url'] }}">
+        Visit this Listing on Yelp
+    </a>
+</p>
+
+<p>Liked: <span id="liked">{{ like }}</span></p>
+
+<label>Do you like this venue?</label>
+<button id="{{ id }}" class="submit">like venue</button>
+<form action="/profile">
+    <button class="submit">Back To Profile</button>
+</form>
+
+
+{% endblock %}
+{% block js %}
+<script src="/static/project.js"></script>
+{% endblock %}

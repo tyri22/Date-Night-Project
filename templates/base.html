@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <!-- import css stylesheet -->
+  <link rel="stylesheet" href="/static/project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fruktur&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Include the specific page's content with this block. -->
+  <ul>
+    {% for message in get_flashed_messages() %}
+      <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% block body %}
+  {% endblock %}
+
+  <!-- Include any page-specific JavaScript using this block. -->
+  {% block js %}
+  {% endblock %}
+</body>
+</html>

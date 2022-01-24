@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Date Venues{% endblock %}
+
+{% block body %}
+
+<div>
+    <h1>Search for Venues by keyword and location</h1>
+
+    <form action="/venues/search" method="POST" name="search-form">
+        <div>
+        <label>Enter a term to search</label>
+        <input type="text" id="term-text" name="term">
+        </div>
+        <div>
+        <label>Enter a location</label>
+        <input type="text" id="loc-text" name="location">
+        </div>
+        <button name="search-button" class="submit">Search venues</button>
+    </form>
+</div>
+<form action="/profile">
+    <button class="submit">Back To Profile</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Date Night{% endblock %}
+
+{% block body %}
+
+<ul id="venue-list">
+    {% for venue in results %}
+      <li>
+        <a href="/businesses/{{ venue['id'] }}">
+          {{ venue['name'] }}
+        </a>
+      </li>
+    {% endfor %}
+</ul>
+<form action="/profile">
+  <button class="submit">Back To Profile</button>
+</form>
+{% endblock %}

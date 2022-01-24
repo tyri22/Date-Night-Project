@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Date Night{% endblock %}
+
+{% block body %}
+
+<h1>Register Now</h1>
+
+<form action="/register" method="POST">
+    
+    <div>
+        <label>Email</label>
+        <input type="user-email" name="new-email">
+
+        <label>password</labe>
+        <input type="user-pass" name="new-password">
+
+        <label>name 1</label>
+        <input type="name1" name="name1">
+
+        <label>name 2</label>
+        <input type="name2" name="name2">
+
+        <input type="submit" class="submit">
+    </div>
+
+</form>
+
+{% endblock %}
